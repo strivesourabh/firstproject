@@ -77,5 +77,9 @@ route::post('users',[UserAuth::class,'login']);
 // Route::POST('upload', [Upload::class, 'index']);
 
 
-Route::get('image', [ImageUploadController::class, 'index']);
-Route::post('upload', [ImageUploadController::class, 'upload']);
+ 
+Route::get('image-upload', [ImageUploadController::class, 'index']);
+Route::post('upload-image', [ImageUploadController::class, 'store'],function () {
+    echo "upload";
+    return redirect('image-upload');
+});
