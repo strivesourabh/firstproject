@@ -30,7 +30,7 @@ class ImageUploadController extends Controller
         $save->name = $name;
         $save->path = $path;
  
-        return redirect('image-upload-preview')->with('status', 'Image Has been uploaded successfully in laravel');
+        return redirect('image-upload')->with('status', 'Image Has been uploaded successfully in laravel');
  
     }
 }

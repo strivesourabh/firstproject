@@ -8,10 +8,10 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    //
-    // function show($id){
-    //     return "hello $id";
-    // }
+    
+    function show($id){
+        return "hello $id";
+    }
         function index()
         {
             

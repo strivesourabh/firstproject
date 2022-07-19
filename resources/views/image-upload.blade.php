@@ -15,7 +15,7 @@
  
  
       <form method="POST" enctype="multipart/form-data" id="upload-image" action="{{ url('upload-image') }}" >
-                 
+                 @csrf
           <div class="row">
  
               <div class="col-md-12">

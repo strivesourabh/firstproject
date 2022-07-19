@@ -7,6 +7,7 @@ use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\Upload;
 use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,7 +80,9 @@ route::post('users',[UserAuth::class,'login']);
 
  
 Route::get('image-upload', [ImageUploadController::class, 'index']);
-Route::post('upload-image', [ImageUploadController::class, 'store'],function () {
-    echo "upload";
-    return redirect('image-upload');
-});
+Route::post('upload-image', [ImageUploadController::class, 'store']);
+
+
+// multiple file
+Route::get('create', [FileController::class, 'create']); 
+Route::post('create', [FileController::class, 'store']);
